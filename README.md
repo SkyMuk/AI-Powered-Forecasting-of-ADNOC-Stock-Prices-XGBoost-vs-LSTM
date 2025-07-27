@@ -1,5 +1,6 @@
 
 # Forecasting ADNOC Stock Prices using XGBoost and LSTM
+!(https://miro.medium.com/v2/resize:fit:1200/1*VXfZ6mfEeanloXSOIDFm3w.png)
 
 ## Purpose
 
@@ -95,6 +96,3 @@ pip install -r requirements.txt
 
 ---
 
-## License
-
-This repository is intended for educational, research, and demonstration purposes only.
