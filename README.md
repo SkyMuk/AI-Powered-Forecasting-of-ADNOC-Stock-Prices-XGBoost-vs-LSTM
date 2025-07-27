@@ -1,53 +1,100 @@
 
-# XGBoost vs LSTM on ADNOC Financial Time Series Data
+# Forecasting ADNOC Stock Prices using XGBoost and LSTM
 
-This project compares two powerful modeling techniques, **XGBoost** and **LSTM**, on ADNOC-related financial time series data to forecast trends, evaluate performance, and extract actionable insights.
+## Purpose
 
-## Project Structure
+This project aims to build and compare machine learning and deep learning models for forecasting ADNOC stock price movements. The goal is to evaluate which method performs better under real-world conditions and to offer transparent, data-driven insights for financial planning, trading, or operational decision-making within the oil and gas industry.
 
-- `notebooks/`: Contains the main Jupyter notebook with model implementation and evaluation
-- `data/`: Placeholder for input data files (CSV format)
-- `plots/`: Visualizations comparing model predictions
-- `models/`: Saved model files (e.g., XGBoost `.pkl`, LSTM `.h5`)
+## About ADNOC
 
-## Models Compared
+The Abu Dhabi National Oil Company (ADNOC) is one of the world's largest and most influential energy producers, playing a central role in the UAE’s economy. ADNOC operates across the entire hydrocarbon value chain—from exploration and production to refining and petrochemicals. Accurate forecasting of ADNOC's financial performance, especially stock trends, is critical for investors, analysts, and economic planners navigating a complex and volatile energy market.
 
-### 1. XGBoost
-A gradient boosting model optimized for tabular data. Strong performance with explainability via SHAP.
+---
 
-### 2. LSTM (Long Short-Term Memory)
-A recurrent neural network model specialized in sequential time series forecasting.
+## 📁 Project Structure
 
-## Key Features
+```
+XGBoost_vs_LSTM_ADNOC_Forecasting/
+│
+├── notebooks/          # Jupyter notebooks with code and results
+├── data/               # Input data files (e.g., .csv)
+├── plots/              # Visualizations: predictions, trends, SHAP
+├── models/             # Trained model files (.h5 for LSTM, .pkl for XGBoost)
+└── README.md           # Project documentation
+```
 
-- Data normalization and preprocessing
-- Model training and evaluation (RMSE, MAE, R², MAPE)
-- Visual comparison of actual vs predicted results
-- Feature importance with SHAP for XGBoost
-- Final recommendation based on model performance
+---
 
-## How to Use
+## 🔍 Models Compared
 
-1. Place your time series CSV file in the `data/` directory.
-2. Run the notebook in `notebooks/` to preprocess data and train models.
-3. Review the output plots and metrics.
-4. Modify or extend the architecture for experimentation.
+### XGBoost
+A gradient boosting tree model known for its speed and performance on structured data. It includes built-in regularization and supports model interpretability via SHAP.
 
-## Use Cases
+### LSTM (Long Short-Term Memory)
+A recurrent neural network architecture ideal for time series forecasting. LSTM excels at learning sequential dependencies and financial market rhythms.
 
-- ADNOC cost forecasting
-- Oil sector financial trend prediction
-- Energy demand modeling
-- Trading signal analysis
+---
 
-## Requirements
+## ✅ Key Features
 
-Install required Python packages:
+- Data normalization and feature engineering
+- Sequence construction for LSTM
+- Train-test split and time series validation
+- Model evaluation using RMSE, MAE, R², and MAPE
+- SHAP explainability for XGBoost
+- Visual comparison of model outputs
 
+---
+
+## 📊 Visual Insights
+
+### Daily Price Volatility Distribution
+![Daily Price Change](plots/Daily_Price.png)
+
+### XGBoost – Actual vs Predicted Prices
+![XGBoost](plots/XGBoost.png)
+
+### LSTM – Actual vs Predicted Prices
+![LSTM](plots/LSTM.png)
+
+These visualizations reveal each model’s ability to learn patterns, trends, and fluctuations in ADNOC’s stock performance.
+
+---
+
+## 🛠️ How to Run
+
+1. Place your time series data (CSV) inside the `data/` directory.
+2. Open the Jupyter notebook in `notebooks/` and run all cells.
+3. Visuals and metrics will be generated in the `plots/` directory.
+
+### Install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
+---
+
+## 🧠 Use Cases
+
+- ADNOC stock price forecasting  
+- Market trend prediction for oil & gas  
+- Risk modeling for portfolio decisions  
+- Trading signal generation using deep learning  
+- Comparative AI research in energy finance  
+
+---
+
+## 📌 Final Recommendation
+
+| Model     | Best For                                    | Advantages                                   | Limitations                               |
+|-----------|-------------------------------------------- |----------------------------------------------|-------------------------------------------|
+| XGBoost   | Fast, interpretable, structured forecasting | Accurate, fast, SHAP explainable             | Limited in sequential understanding       |
+| LSTM      | Sequence learning and trend analysis        | Captures long-term dependencies and patterns | Requires more data and tuning             |
+
+**Suggestion**: Use XGBoost for quick, explainable results and LSTM for advanced forecasting where patterns evolve over time. Combining both in an ensemble could lead to more robust financial predictions.
+
+---
+
 ## License
 
-This project is intended for educational and demonstration purposes.
+This repository is intended for educational, research, and demonstration purposes only.
