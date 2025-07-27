@@ -1,6 +1,6 @@
 
 # Forecasting ADNOC Stock Prices using XGBoost and LSTM
-![ADNOC](1_VXfZ6mfEeanloXSOIDFm3w.png)
+![ADNOC](ADNOC)
 ## Purpose
 
 This project aims to build and compare machine learning and deep learning models for forecasting ADNOC stock price movements. The goal is to evaluate which method performs better under real-world conditions and to offer transparent, data-driven insights for financial planning, trading, or operational decision-making within the oil and gas industry.
